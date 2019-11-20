@@ -1,0 +1,14 @@
+<h4>Add Entity</h4>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <label for="property1">Property 1</label> &nbsp;
+    <input type="text" formControlName="property1" name="property1" id="property1">
+    <br>
+    <label for="property2">Property 2</label> &nbsp;
+    <input type="text" formControlName="property2" name="property2" id="property2">
+    <br>
+    <label for="property3">Property 3</label> &nbsp;
+    <input type="text" formControlName="property3" name="property3" id="property3">
+    <br>
+    <button class="btn btn-success" id="add">Add</button> &nbsp;
+    <button class="btn btn-secondary" (click)="onCancel()" id="cancel">Cancel</button>
+</form>

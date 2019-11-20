@@ -1,0 +1,25 @@
+<h4>Independent Entities</h4>
+<div class="border rounded">
+  <table class="table" id="independentEntityTable">
+    <tr>
+      <th scope="col">Property 1</th>
+      <th scope="col">Property 2</th>
+      <th scope="col">Property 3</th>
+      <th></th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let entity of entities">
+        <td>{{entity.property1}}</td>
+        <td>{{entity.property2}}</td>
+        <td>{{entity.property3}}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Edit or Delete Entity">
+            <button size="sm" id="edit_{{entity.id}}" class="btn btn-primary" (click)="editEntity(entity)">Edit</button>
+            <button size="sm" id="delete_{{entity.id}}" class="btn btn-danger" (click)="deleteEntity(entity)">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary float-right" id="addIndependentEntity" (click)="addEntity()">Add Entity</button>
+</div>
